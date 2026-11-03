@@ -5,24 +5,30 @@
 ## Members
 
 ### Member A
-- GitHub username:
-- Coordination responsibility:
+- GitHub username: RuiMin8
+- Coordination responsibility: Team Coordination
 
 ### Member B
-- GitHub username:
-- Coordination responsibility:
+- GitHub username: Aori7
+- Coordination responsibility: Requirements and Baseline
 
 ### Member C
-- GitHub username:
-- Coordination responsibility:
+- GitHub username: Chris-JKSH
+- Coordination responsibility: Guided Test Coverage
 
 ### Member D
-- GitHub username:
-- Coordination responsibility:
+- GitHub username: Lim-ZiYing
+- Coordination responsibility: Evidence Organisation
 
 ## Guided Test Allocation
 
 ## Agreed Baseline Data
+Activity 2
+Firstname: Alexander
+Last Name: TestingStudent
+Age: Assigned testing age
+Country: Singapore
+Notes: Manual testing classroom exercise
 
 ## Open-Ended Testing Allocation
 
