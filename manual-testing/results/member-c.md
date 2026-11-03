@@ -56,7 +56,55 @@ After entering `standard_user` with an empty password field and selecting Login,
 [View screenshot](../evidence/member-c/login-n02.png)
 ---
 ## Equivalence Partitioning
+### Test ID: AGE-EP-90-C
 
+| Item | Details |
+|---|---|
+| Test type | Negative |
+| Tester | member-c |
+| Website | Test Pages validation form |
+| Technique | Equivalence partitioning |
+| Status | Not run |
+
+#### Purpose
+
+Check that an age above the accepted range (EP-03) is rejected.
+
+#### Preconditions
+
+The validation form is open and all other fields use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| First name | `Alexander` |
+| Surname | `TestingStudent` |
+| Age | `90` |
+| Country | Singapore |
+| Notes | `Manual testing classroom exercise` |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline values.
+3. Replace age with `90`.
+4. Submit the form.
+5. Observe whether the submission succeeds or a validation error appears.
+
+#### Expected Result
+
+Age 90 is rejected because it is above the maximum age of 80.
+
+#### Actual Result
+
+After entering the baseline values with age changed to `90` and selecting Submit, the form did not submit. A browser validation tooltip appeared on the age field with the message "Value must be less than or equal to 80." The age field was highlighted and no results page was shown. The rejection came from client-side (browser) validation, so no server response was observed for this value.
+
+#### Evidence
+
+[View screenshot](../evidence/member-c/age-ep-90-c.png)
+
+---
 ## 2-Point Boundary Tests
 
 ## 3-Point Boundary Tests
