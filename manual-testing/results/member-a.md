@@ -10,45 +10,102 @@
 | Operating system | windows |
 
 ## Login Tests
-### Test ID: YOUR-TEST-ID
+### Test ID: LOGIN-P01
 
 | Item | Details |
 |---|---|
-| Test type | Positive / Negative / Recovery |
-| Tester | Your member identifier |
+| Test type | Positive |
+| Tester | member a |
 | Website | Website name |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
-What does this test check?
+This test checks if the user is brought to the inventory page after entering the correct username and password
 
 #### Preconditions
 
-What must be true before the test starts?
+The user must be logged out.
 
 #### Test Data
 
 | Field | Value |
 |---|---|
-| Input name | Input value |
+| Username | standard_user |
+| Password | secret_sauce |
 
 #### Steps
 
-1.
-2.
-3.
+1. Follow the shared starting procedure.
+2. Enter the username.
+3. Enter the password.
+4. Select Login.
+5. Observe the page reached.
+6. Check that products are visible.
 
 #### Expected Result
 
-Write this before executing the test.
+The inventory page appears and products are visible.
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+After entering the username and password and selecting the login button, the inventory page appeared and
+the product list was visible.
 
 #### Evidence
 [View screenshot](../evidence/member-a/login-p01.png)
+
+---
+
+### Test ID: LOGIN-R01
+
+| Item | Details |
+|---|---|
+| Test type | Recovery |
+| Tester | Your member identifier |
+| Website | Website name |
+| Status | pass |
+
+#### Purpose
+
+This test checks if the user is brought to the inventory page after 1 failed and 1 valid attempt at logging in
+
+#### Preconditions
+
+The user must be logged out
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| Username | standard_user |
+| Incorrect Password | wrong_password |
+| Correct Password | secret_sauce |
+
+#### Steps
+
+1. Follow the shared starting procedure.
+2. Enter standard_user and wrong_password.
+3. Select Login.
+4. Confirm rejection.
+5. Replace the password with secret_sauce.
+6. Keep the username unchanged.
+7. Select Login again.
+8. Check whether the inventory appears.
+
+#### Expected Result
+
+The invalid attempt is rejected. After correcting the password, login succeeds.
+Record both stages in the actual result.
+
+#### Actual Result
+
+After entering the incorrect password, it remains on the login page and displays a rejection message.
+After confirming the rejection and entering the correct passowrd, it displays the inventory page.
+
+#### Evidence
+
+[View screenshot](../evidence/member-a/login-r01.png)
 
 ---
 
