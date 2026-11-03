@@ -74,7 +74,7 @@ After selecting Login with the username empty and the password `secret_sauce`, t
 | Tester | member-d |
 | Website | Test Pages validation form |
 | Technique | Input-format observation |
-| Status | Not run |
+| Status | Observation only |
 
 #### Purpose
 
@@ -106,7 +106,15 @@ Requirement question: the published requirements state that age must be between 
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+With all other fields set to the agreed baseline and Age left empty, I selected Submit. The form was not submitted. The browser showed a validation popup on the Age field with the message "Please fill out this field." and the page did not change.
+
+- Can the field be left blank? Yes, the field can be empty, but the form cannot be submitted with it empty.
+- Prevented or rejected? Prevented by client-side (browser) validation before submission. No server response was received, so this does not show how the server handles a blank age.
+- Feedback: Browser popup "Please fill out this field." next to the Age field.
+
+Additional observation: the Age field shows up/down spinner arrows, suggesting it is a number input.
+
+Requirement question: the browser treats Age as required, but the published requirements only state the 18–80 range. Is Age intended to be a required field?
 
 Record:
 - Can the field be left blank?
@@ -115,7 +123,7 @@ Record:
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-d/age-fmt-blank.png)
 
 ---
 
@@ -127,7 +135,7 @@ Not captured.
 | Tester | member-d |
 | Website | Test Pages validation form |
 | Technique | Input-format observation |
-| Status | Not run |
+| Status | Observation only |
 
 #### Purpose
 
@@ -160,7 +168,13 @@ Requirement question: the requirements do not state how non-numeric age input is
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+With all other fields set to the agreed baseline, I clicked into the Age field and tried to type `abc`. The characters did not appear; the Age field stayed empty. Because the input could not be entered, the form was not submitted with `abc`.
+
+- Could `abc` be typed into the field? No. The browser prevented the letters from being entered.
+- Prevented, cleared, or rejected? Prevented at input by the browser (number field). It was never submitted, so this does not show how the server would handle non-numeric age.
+- Feedback: No message appeared; the letters simply did not register.
+
+Requirement question: the requirements do not state how non-numeric age should be handled. Server-side handling of non-numeric age could not be observed through normal browser use.
 
 Record:
 - Could `abc` be typed into the field?
@@ -171,7 +185,7 @@ Note: if the browser prevents the input, record that. Do not describe it as a se
 
 #### Evidence
 
-Not captured.
+Not captured — the observation is that typed characters did not appear, which a screenshot cannot clearly show.
 
 ---
 
