@@ -46,7 +46,7 @@ Test strings were prepared with exact lengths, starting with `Surname` followed 
 | Tester | member-d |
 | Website | Test Pages validation form |
 | Technique | 2-point boundary testing |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -77,11 +77,13 @@ Rejected, because 10 characters is below the minimum of 11.
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+With all other fields set to the agreed baseline and Surname set to `Surnameabc` (10 characters), I selected Submit. The submission was rejected: a red message appeared on the page directly below the Last name field reading "Surname provided is too short". The entered values remained in the form.
+
+Observation: unlike the age tests, this was not a browser popup bubble. It was a message displayed in the page itself, so surname length appears to be checked differently from age. From the browser alone I could not confirm whether this message came from the server or from the page's own script.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-d/own-01.png)
 
 ---
 
@@ -93,7 +95,7 @@ Not captured.
 | Tester | member-d |
 | Website | Test Pages validation form |
 | Technique | 2-point boundary testing |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -124,11 +126,13 @@ Accepted, assuming 11 is inclusive in "between 11 and 79".
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+With all other fields set to the agreed baseline and Surname set to `Surnameabcd` (11 characters), I selected Submit. No error appeared on the Last name field. A "Validation Report" section appeared below the form stating "Valid Input — Your Input passed validation", followed by a "You submitted" list showing Firstname `Alexander`, Surname `Surnameabcd`, Age `30`, Country `Singapore`, and Notes `Manual testing classroom exercise`.
+
+The submitted surname matched the intended 11-character value, so the minimum length of 11 was accepted. Together with OWN-D-01, this shows the transition from invalid (10) to valid (11) is in the expected place.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-d/own-02.png)
 
 ---
 
@@ -140,7 +144,7 @@ Not captured.
 | Tester | member-d |
 | Website | Test Pages validation form |
 | Technique | 2-point boundary testing |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -172,11 +176,13 @@ Accepted, assuming 79 is inclusive in "between 11 and 79".
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+With all other fields set to the agreed baseline and Surname set to the 79-character test value, I selected Submit. A "Validation Report" appeared stating "Valid Input — Your Input passed validation". The "You submitted" list showed the full surname ending in `...klmnopqrst`, so the value was not truncated. The maximum length of 79 was accepted.
+
+Note: my first attempt was invalid because the form had been reloaded without the baseline (First name empty, Country "Afghanistan", Notes empty). The browser stopped it with "Please fill out this field." on First name. I did not count that attempt and repeated the test with the full baseline.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-d/own-03.png)
 
 ---
 
@@ -188,7 +194,7 @@ Not captured.
 | Tester | member-d |
 | Website | Test Pages validation form |
 | Technique | 2-point boundary testing |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -220,18 +226,22 @@ Rejected, because 80 characters is above the maximum of 79. This could happen by
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+With all other fields set to the agreed baseline and Surname set to the 80-character test value, I selected Submit. The submission was rejected: a red message appeared on the page directly below the Last name field reading "Surname provided is too long". No Validation Report appeared.
+
+The field did not stop me entering the 80th character. The whole value could be pasted in, and the length was only rejected when I submitted.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-d/own-04.png)
 
 ---
 
 ## Overall Observations
 
-To be completed after execution.
+All four surname boundary tests passed. Lengths 10 and 80 were rejected; 11 and 79 were accepted. This shows that "between 11 and 79" is treated as inclusive, which answers my requirement question for this form.
+
+Surname length is validated differently from age. Age errors appeared as browser popup bubbles before submission. Surname errors appeared as red messages written on the page. The surname field also did not limit how many characters could be typed. From the browser alone I could not confirm whether the surname messages came from the server or the page's own script.
 
 ## Next Question
 
-To be completed after execution.
+Does the First name field (required, fewer than 90 characters) behave the same way as Surname? I would test lengths 89 and 90 to see whether "fewer than 90" means 89 is the maximum.
