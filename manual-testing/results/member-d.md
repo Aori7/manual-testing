@@ -253,7 +253,7 @@ Age 81 was rejected by client-side (browser) validation before submission, so no
 | Tester | member-d |
 | Website | Test Pages validation form |
 | Technique | 3-point boundary testing |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -285,11 +285,13 @@ Age 82 is rejected because it is above the maximum age of 80.
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+With all other fields set to the agreed baseline and Age set to `82`, I selected Submit. The form was not submitted. The browser showed a validation popup on the Age field with the message "Value must be less than or equal to 80." and the page did not change.
+
+Age 82 was rejected by client-side (browser) validation before submission, so no server response was observed.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-d/age-3p-82.png)
 
 ---
 
