@@ -5,9 +5,9 @@
 | Item | Details |
 |---|---|
 | Tester identifier | member-d |
-| Date and time | |
-| Browser and version | |
-| Operating system | |
+| Date and time | 3 Nov 2026, 17:00 SGT |
+| Browser and version | Google Chrome 142.0.7444.60 |
+| Operating system | Windows 11 Home 24H2 |
 
 ## Login Tests
 
@@ -18,7 +18,7 @@
 | Test type | Negative |
 | Tester | member-d |
 | Website | SauceDemo |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -52,11 +52,11 @@ The login attempt is rejected and validation feedback appears. The inventory pag
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+After selecting Login with the username empty and the password `secret_sauce`, the page stayed on the Swag Labs login page. A red error banner appeared with the message "Epic sadface: Username is required". Both input fields were outlined in red with an error icon. The inventory page was not reached.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-d/login-n03.png)
 
 ---
 
