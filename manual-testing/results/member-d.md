@@ -185,7 +185,7 @@ Note: if the browser prevents the input, record that. Do not describe it as a se
 
 #### Evidence
 
-Not captured — the observation is that typed characters did not appear, which a screenshot cannot clearly show.
+[View screenshot](../evidence/member-d/age-fmt-abc.png) — Age field still empty after attempting to type `abc`.
 
 ---
 
@@ -199,7 +199,7 @@ Not captured — the observation is that typed characters did not appear, which 
 | Tester | member-d |
 | Website | Test Pages validation form |
 | Technique | 2-point boundary testing |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -231,11 +231,13 @@ Age 81 is rejected because it is above the maximum age of 80.
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+With all other fields set to the agreed baseline and Age set to `81`, I selected Submit. The form was not submitted. The browser showed a validation popup on the Age field with the message "Value must be less than or equal to 80." and the page did not change.
+
+Age 81 was rejected by client-side (browser) validation before submission, so no server response was observed.
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-d/age-2p-81.png)
 
 ---
 
