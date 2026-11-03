@@ -156,3 +156,52 @@ After entering the baseline values with age changed to `80` and selecting Submit
 
 ---
 ## 3-Point Boundary Tests
+### Test ID: AGE-3P-79-C
+
+| Item | Details |
+|---|---|
+| Test type | Positive |
+| Tester | member-c |
+| Website | Test Pages validation form |
+| Technique | 3-point boundary testing |
+| Status | Not run |
+
+#### Purpose
+
+Check that age 79, one below the maximum boundary value of 80, is accepted.
+
+#### Preconditions
+
+The validation form is open. All other fields use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| First name | `Alexander` |
+| Surname | `TestingStudent` |
+| Age | `79` |
+| Country | Singapore |
+| Notes | `Manual testing classroom exercise` |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline.
+3. Replace age with `79`.
+4. Submit the form.
+5. Observe whether the submission succeeds.
+
+#### Expected Result
+
+Age 79 is accepted because it is within the valid range of 18 to 80. The form submits successfully and the results page shows age 79.
+
+#### Actual Result
+
+After entering the baseline values with age changed to `79` and selecting Submit, the form submitted and a results page appeared. The Validation Report showed "Valid Input: Your Input passed validation". The "You submitted" list showed Firstname `Alexander`, Surname `TestingStudent`, Age `79`, Country `Singapore` and Notes `Manual testing classroom exercise`. No validation errors were shown.
+
+#### Evidence
+
+[View screenshot](../evidence/member-c/age-3p-79-c.png)
+
+---
