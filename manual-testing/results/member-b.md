@@ -123,7 +123,7 @@ the test rejects meaning a validation error is returned for the age
 | Tester | member-b |
 | Website | Test Pages validation form |
 | Technique | 2-point boundary testing |
-| Status | Not run |
+| Status | pass |
 
 #### Purpose
 
@@ -164,3 +164,56 @@ age 18 is accepted
 ---
 
 ## 3-Point Boundary Tests
+### Test ID: AGE-3P-19-B
+
+| Item | Details |
+|---|---|
+| Test type | positive |
+| Tester | member-b |
+| Website | Test Pages validation form |
+| Technique | 3-point boundary testing |
+| Status | pass |
+
+#### Purpose
+
+Check that an age immediately below the minimum is rejected.
+
+#### Preconditions
+
+The validation form is open.
+All other fields will use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| Age | `19` |
+| Other fields | Agreed valid baseline |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline.
+3. Replace age with `19`.
+4. Submit.
+5. Observe the response.
+
+#### Expected Result
+
+Age 19 is accepted because it is a valid age range of 18-80
+
+#### Actual Result
+
+age 19 is accepted
+
+#### Evidence
+
+[View screenshot](../evidence/member-b/AGE-3P-19-B.png)
+
+---
+### Age 17 — Reused Execution
+
+- Original test: `AGE-2P-18-B`
+- Tester: `member-b`
+- Record: [Member b’s results](member-b.md)
+- Reason for reuse: The baseline, environment, and procedure remain applicable.
