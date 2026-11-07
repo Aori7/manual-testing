@@ -16,7 +16,7 @@
 |---|---|
 | Test type | Positive |
 | Tester | member a |
-| Website | Website name |
+| Website | Swag Labs |
 | Status | Pass |
 
 #### Purpose
@@ -62,8 +62,8 @@ the product list was visible.
 | Item | Details |
 |---|---|
 | Test type | Recovery |
-| Tester | Your member identifier |
-| Website | Website name |
+| Tester | memeber a |
+| Website | Swag Labs |
 | Status | pass |
 
 #### Purpose
@@ -105,11 +105,57 @@ After confirming the rejection and entering the correct passowrd, it displays th
 
 #### Evidence
 
-[View screenshot](../evidence/member-a/login-r01.png)
+[View screenshot](../evidence/member-a/login-r01-p1.png)
+[View screenshot](../evidence/member-a/login-r01-p2.png)
 
 ---
 
 ## Equivalence Partitioning
+### Test ID: AGE-EP-30-A
+
+| Item | Details |
+|---|---|
+| Test type | Positive |
+| Tester | member a |
+| Website | Test Pages |
+| Status | Not run |
+
+#### Purpose
+
+To verify that the form accepts a valid age of 30, which falls within the required age range of 18–80
+
+#### Preconditions
+
+All other input fields contain valid baseline values. Only the age field is changed
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| First Name | Alex |
+| Surname | TestingStudent |
+| Age | 30 |
+| Country | Singapore |
+| Notes | Manual testing classroom exercise |
+
+#### Steps
+
+1. Enter the test data values into the input fields.
+2. Click the Submit button and observe the result.
+
+#### Expected Result
+
+The form should accept Age 30 and submit successfully without displaying any age validation errors.
+
+#### Actual Result
+
+The form accepted Age 30 and submitted successfully without any validation errors.
+
+#### Evidence
+
+[View screenshot](../evidence/member-a/login-r01-p2.png)
+
+---
 
 ## 2-Point Boundary Tests
 
