@@ -43,6 +43,11 @@ Notes: Manual testing classroom exercise
 - Chosen area: Age validation and error recovery
 - Question to investigate: What happens when the user corrects an error and tries again?
 
+### Member B — Open-Ended Testing
+
+- Chosen area: Decimal age input validation.
+- Question to investigate: Does the age validation form accept decimal values, and how does it handle decimal values outside the permitted age range?
+
 ### Member D — Open-Ended Testing
 
 - Chosen area: Surname length on the Test Pages validation form.
