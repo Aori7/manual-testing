@@ -31,5 +31,9 @@ Country: Singapore
 Notes: Manual testing classroom exercise
 
 ## Open-Ended Testing Allocation
+### Member A — Open-Ended Testing
+
+- Chosen area: Age validation and error recovery
+- Question to investigate: What happens when the user corrects an error and tries again?
 
 ## Repository Integration Arrangements
