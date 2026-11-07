@@ -14,7 +14,7 @@ Required coverage:
 - Recovery after an invalid attempt.
 
 Results:
-- Valid credentials (LOGIN-P01, member-a): _To be added_
+- Valid credentials (LOGIN-P01, member-a): Pass — [View record](results/member-a.md#login-tests)
 - Incorrect password (LOGIN-N01, member-b): _To be added_
 - Missing password (LOGIN-N02, member-c): _To be added_
 - Missing username (LOGIN-N03, member-d): Pass — [View record](results/member-d.md#test-id-login-n03)
@@ -29,7 +29,7 @@ Required coverage:
 
 Results:
 - Age 10 (AGE-EP-10-B, member-b): _To be added_
-- Age 30 (AGE-EP-30-A, member-a): _To be added_
+- Age 30 (AGE-EP-30-A, member-a): Pass — [View record](results/member-a.md#equivalence-partitioning)
 - Age 90 (AGE-EP-90-C, member-c): _To be added_
 
 ### Input-Format Observations
@@ -48,7 +48,7 @@ Required values:
 17, 18, 80, 81.
 
 Results:
-- 17 (AGE-2P-17-A, member-a): _To be added_
+- 17 (AGE-2P-17-A, member-a): Pass — [View record](results/member-a.md#2-point-boundary-tests)
 - 18 (AGE-2P-18-B, member-b): _To be added_
 - 80 (AGE-2P-80-C, member-c): _To be added_
 - 81 (AGE-2P-81-D, member-d): Pass — [View record](results/member-d.md#test-id-age-2p-81-d)
@@ -61,7 +61,7 @@ Required values:
 Convention: ISTQB CTFL v4.0 eight-value convention.
 
 Results:
-- 16 (member-a): _To be added_
+- 16 (member-a): Pass — [View record](results/member-a.md#3-point-boundary-tests)
 - 17: reused from AGE-2P-17-A — _To be added_
 - 18: reused from AGE-2P-18-B — _To be added_
 - 19 (member-b): _To be added_
@@ -77,9 +77,9 @@ Results:
 - Guided results: [View results](results/member-a.md)
 - Self-designed tests: [View tests](exploratory/member-a.md)
 - Reflection: [View reflection](reflections/member-a.md)
-- Chosen investigation: _To be added_
-- Main observation: _To be added_
-- Pull request: _To be added_
+- Chosen investigation: Age validation and error recovery. I tested whether the form accepts a valid age after correcting an invalid age without refreshing the page.
+- Main observation: I learned that negative tests can pass when invalid inputs are correctly rejected. I also learned how boundary testing helps identify validation issues near the accepted age limits
+- Pull request: [View my pull request](https://github.com/Aori7/manual-testing/pull/6)
 
 ### Member B
 
@@ -110,8 +110,14 @@ Results:
 
 ## Team Conclusion
 
-_To be added once all members' work is merged._
-
 - What did the guided activities help us understand?
+
+The guided activities helped us understand how equivalence partitioning and boundary testing can be used to select test data effectively. We also learned the difference between positive and negative testing, and that a negative test can pass when the system correctly rejects invalid inputs.
+
 - How did members extend the testing in different directions?
+
+During the open-ended activity, each member chose an area to investigate beyond the guided tests. This allowed us to explore different aspects of the form's behaviour, such as input validation and error handling, rather than only checking whether inputs were accepted or rejected.
+
 - What would the team investigate next?
+
+As a team, we would investigate how the form handles errors when users correct invalid inputs. We could also test multiple invalid fields at the same time to see whether the form displays clear error messages and allows users to correct their mistakes easily.
