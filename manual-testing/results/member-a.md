@@ -206,11 +206,56 @@ A validation error messgae appears under the age field, asking for an input equa
 
 ---
 
+## 3-Point Boundary Tests
+### Test ID: AGE-3P-16-A
+
+| Item | Details |
+|---|---|
+| Test type | Negative |
+| Tester | member a |
+| Website | Test Pages validation form |
+| Technique | 3-point boundary testing |
+| Status | Pass |
+
+#### Purpose
+
+Check that an age immediately below the minimum is rejected.
+
+#### Preconditions
+
+The validation form is open.
+All other fields will use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| Age | `16` |
+| Other fields | Agreed valid baseline |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline.
+3. Replace age with `16`.
+4. Submit.
+5. Observe the response.
+
+#### Expected Result
+
+Age 16 is rejected because it is below the minimum age of 18.
+
+#### Actual Result
+
+A validation error messgae appears under the age field, asking for an input equal or greater than 18.
+
+#### Evidence
+
+[View screenshot](../evidence/member-a/AGE-3P-16-A.png)
+
 ### Age 17 — Reused Execution
 
 - Original test: `AGE-2P-17-A`
 - Tester: `member-a`
 - Record: [Member A’s results](member-a.md)
 - Reason for reuse: The baseline, environment, and procedure remain applicable.
-
-## 3-Point Boundary Tests
