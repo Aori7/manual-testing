@@ -106,7 +106,7 @@ Results:
 - Reflection: [View reflection](reflections/member-d.md)
 - Chosen investigation: Surname length boundaries (10, 11, 79 and 80 characters).
 - Main observation: All four passed, so "between 11 and 79" is treated as inclusive. Surname errors appear as red messages on the page, while age errors are browser popup bubbles shown before submission, so the two fields are validated differently.
-- Pull request: PASTE_YOUR_PR_LINK_HERE
+- Pull request: [View my pull request](https://github.com/Aori7/manual-testing/pull/4)
 
 ## Team Conclusion
 

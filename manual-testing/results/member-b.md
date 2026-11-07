@@ -33,7 +33,7 @@ The user must be logged out
 
 | Field | Value |
 |---|---|
-| Input username | standard_usr |
+| Input username | standard_user |
 | input password | wrong_password |
 
 #### Steps
@@ -59,46 +59,58 @@ the login rejection occured as expected
 ---
 
 ## Equivalence Partitioning
-### Test ID: YOUR-TEST-ID
+### Test ID: AGE-EP-10-B
 
 | Item | Details |
 |---|---|
-| Test type | Positive / Negative / Recovery |
-| Tester | Your member identifier |
-| Website | Website name |
-| Status | Not run |
+| Test type | negative |
+| Tester | member b |
+| Website | test pages |
+| Status | pass |
 
 #### Purpose
 
 What does this test check?
+this test checks the age validation
 
 #### Preconditions
 
 What must be true before the test starts?
+when testing age, every other field should be valid and unchanged
 
 #### Test Data
 
 | Field | Value |
 |---|---|
-| Input name | Input value |
+| Firstname | Alexander|
+| Lastname  | TestingStudent |
+| Age | 10 |
+| Country | Singapore | 
+| Notes | Manual testing classroom exercise |
 
 #### Steps
-
-1.
-2.
-3.
+ 
+1. restore the form
+2. enter the valid baseline
+3. change only age
+4. write the expected result
+5. submit
+6. observe acceptance or rejection
+7. where displayed, verify the submitted age
+8. record the actual result and status in a seperate test-case block
 
 #### Expected Result
 
 Write this before executing the test.
+the test rejects the age value
 
 #### Actual Result
 
-Not recorded — test has not been executed.
+the test rejects meaning a validation error is returned for the age
 
 #### Evidence
 
-Not captured.
+[View screenshot](../evidence/member-b/AGE-EP-10-B.png)
 
 ---
 
