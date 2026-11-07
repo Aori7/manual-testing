@@ -251,7 +251,7 @@ A validation error messgae appears under the age field, asking for an input equa
 
 #### Evidence
 
-[View screenshot](../evidence/member-a/AGE-2P-16-A.png)
+[View screenshot](../evidence/member-a/AGE-3P-16-A.png)
 
 ### Age 17 — Reused Execution
 
