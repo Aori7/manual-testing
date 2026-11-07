@@ -118,7 +118,7 @@ After confirming the rejection and entering the correct passowrd, it displays th
 | Test type | Positive |
 | Tester | member a |
 | Website | Test Pages |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -153,10 +153,57 @@ The form accepted Age 30 and submitted successfully without any validation error
 
 #### Evidence
 
-[View screenshot](../evidence/member-a/login-r01-p2.png)
+[View screenshot](../evidence/member-a/AGE-EP-30-A.png)
 
 ---
 
 ## 2-Point Boundary Tests
+### Test ID: AGE-2P-17-A
+
+| Item | Details |
+|---|---|
+| Test type | Negative |
+| Tester | member a |
+| Website | Test Pages validation form |
+| Technique | 2-point boundary testing |
+| Status | Not run |
+
+#### Purpose
+
+Check that an age immediately below the minimum is rejected.
+
+#### Preconditions
+
+The validation form is open.
+All other fields will use the agreed valid baseline.
+
+#### Test Data
+
+| Field | Value |
+|---|---|
+| Age | `17` |
+| Other fields | Agreed valid baseline |
+
+#### Steps
+
+1. Restore the validation form.
+2. Enter the agreed baseline.
+3. Replace age with `17`.
+4. Submit.
+5. Observe the response.
+
+#### Expected Result
+
+Age 17 is rejected because it is below the minimum age of 18.
+
+#### Actual Result
+
+A validation error messgae appears under the age field, asking for an input equal or greater than 18.
+
+#### Evidence
+
+[View screenshot](../evidence/member-a/AGE-2P-17-A.png)
+
+---
 
 ## 3-Point Boundary Tests
