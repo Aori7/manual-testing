@@ -15,7 +15,7 @@ Required coverage:
 
 Results:
 - Valid credentials (LOGIN-P01, member-a): Pass — [View record](results/member-a.md#login-tests)
-- Incorrect password (LOGIN-N01, member-b): _To be added_
+- Incorrect password (LOGIN-N01, member-b):  Pass — [View record](results/member-b.md#test-id-login-n01)
 - Missing password (LOGIN-N02, member-c): Pass — [View record](results/member-c.md#test-id-login-n02)
 - Missing username (LOGIN-N03, member-d): Pass — [View record](results/member-d.md#test-id-login-n03)
 - Recovery after an invalid attempt (LOGIN-R01, member-a): _To be added_
@@ -28,7 +28,7 @@ Required coverage:
 - Age above the accepted range.
 
 Results:
-- Age 10 (AGE-EP-10-B, member-b): _To be added_
+- Age 10 (AGE-EP-10-B, member-b): Pass — [View record](results/member-b.md#test-id-age-ep-10-b)
 - Age 30 (AGE-EP-30-A, member-a): Pass — [View record](results/member-a.md#equivalence-partitioning)
 - Age 90 (AGE-EP-90-C, member-c): Pass — rejected by the browser before submission ("Value must be less than or equal to 80.") [View record](results/member-c.md#test-id-age-ep-90-c)
 
@@ -49,7 +49,7 @@ Required values:
 
 Results:
 - 17 (AGE-2P-17-A, member-a): Pass — [View record](results/member-a.md#2-point-boundary-tests)
-- 18 (AGE-2P-18-B, member-b): _To be added_
+- 18 (AGE-2P-18-B, member-b): Pass — [View record](results/member-b.md#test-id-age-2p-18-b)
 - 80 (AGE-2P-80-C, member-c): Pass — [View record](results/member-c.md#test-id-age-2p-80-c)
 - 81 (AGE-2P-81-D, member-d): Pass — [View record](results/member-d.md#test-id-age-2p-81-d)
 
@@ -62,9 +62,7 @@ Convention: ISTQB CTFL v4.0 eight-value convention.
 
 Results:
 - 16 (member-a): Pass — [View record](results/member-a.md#3-point-boundary-tests)
-- 17: reused from AGE-2P-17-A — _To be added_
-- 18: reused from AGE-2P-18-B — _To be added_
-- 19 (member-b): _To be added_
+- 19 (AGE-3P-19-B, member-b): Pass — [View record](results/member-b.md#test-id-age-3p-19-b)
 - 79 (AGE-3P-79-C, member-c): Pass — [View record](results/member-c.md#test-id-age-3p-79-c)
 - 80: reused from AGE-2P-80-C (member-c) — [View record](results/member-c.md#test-id-age-2p-80-c)
 - 81: reused from AGE-2P-81-D (member-d) — [View record](results/member-d.md#test-id-age-2p-81-d)
@@ -83,12 +81,14 @@ Results:
 
 ### Member B
 
+### Member B
+
 - Guided results: [View results](results/member-b.md)
 - Self-designed tests: [View tests](exploratory/member-b.md)
 - Reflection: [View reflection](reflections/member-b.md)
-- Chosen investigation: _To be added_
-- Main observation: _To be added_
-- Pull request: _To be added_
+- Chosen investigation: Decimal age input validation. I tested whether the form accepts decimal values within and outside the permitted age range.
+- Main observation: All three decimal inputs (18.5, 17.5 and 80.5) were rejected by the validation form. This suggests that the form may only accept whole-number ages. However, the requirements do not explicitly state whether decimal values are allowed, so further clarification may be needed.
+- Pull request: [View my pull request](https://github.com/Aori7/manual-testing/pull/12)
 
 ### Member C
 
