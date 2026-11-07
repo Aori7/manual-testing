@@ -61,7 +61,7 @@ Required values:
 Convention: ISTQB CTFL v4.0 eight-value convention.
 
 Results:
-- 16 (member-a): Pass — [View record](results/member-a.md##-3-Point-Boundary-Tests)
+- 16 (member-a): Pass — [View record](results/member-a.md#-3-point-boundary-tests)
 - 17: reused from AGE-2P-17-A — _To be added_
 - 18: reused from AGE-2P-18-B — _To be added_
 - 19 (member-b): _To be added_
