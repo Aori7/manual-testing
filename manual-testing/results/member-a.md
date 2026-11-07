@@ -166,7 +166,7 @@ The form accepted Age 30 and submitted successfully without any validation error
 | Tester | member a |
 | Website | Test Pages validation form |
 | Technique | 2-point boundary testing |
-| Status | Not run |
+| Status | Pass |
 
 #### Purpose
 
@@ -205,5 +205,12 @@ A validation error messgae appears under the age field, asking for an input equa
 [View screenshot](../evidence/member-a/AGE-2P-17-A.png)
 
 ---
+
+### Age 17 — Reused Execution
+
+- Original test: `AGE-2P-17-A`
+- Tester: `member-a`
+- Record: [Member A’s results](member-a.md)
+- Reason for reuse: The baseline, environment, and procedure remain applicable.
 
 ## 3-Point Boundary Tests
