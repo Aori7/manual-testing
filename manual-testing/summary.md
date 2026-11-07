@@ -97,7 +97,7 @@ Results:
 - Reflection: [View reflection](reflections/member-c.md)
 - Chosen investigation: Surname length boundaries (10, 11, 79 and 80 characters).
 - Main observation: Surnames of 11 and 79 characters were accepted, and 10 and 80 were rejected with "too short" and "too long" messages, so the range 11 to 79 is treated as inclusive. The baseline first name `Alex` was rejected as "too short" although the instructions give no minimum, which is an unanswered requirement question.
-- Pull request: PASTE_YOUR_PR_LINK_HERE
+- Pull request: [View my pull request](https://github.com/Aori7/manual-testing/pull/3)
 
 ### Member D
 
