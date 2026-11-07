@@ -14,7 +14,7 @@ Required coverage:
 - Recovery after an invalid attempt.
 
 Results:
-- Valid credentials (LOGIN-P01, member-a): Pass — [View record](results/member-a.md##-Login-Tests)
+- Valid credentials (LOGIN-P01, member-a): Pass — [View record](results/member-a.md#login-tests)
 - Incorrect password (LOGIN-N01, member-b): _To be added_
 - Missing password (LOGIN-N02, member-c): _To be added_
 - Missing username (LOGIN-N03, member-d): Pass — [View record](results/member-d.md#test-id-login-n03)
@@ -29,7 +29,7 @@ Required coverage:
 
 Results:
 - Age 10 (AGE-EP-10-B, member-b): _To be added_
-- Age 30 (AGE-EP-30-A, member-a): Pass — [View record](results/member-a.md##-Equivalence-Partitioning)
+- Age 30 (AGE-EP-30-A, member-a): Pass — [View record](results/member-a.md#equivalence-partitioning)
 - Age 90 (AGE-EP-90-C, member-c): _To be added_
 
 ### Input-Format Observations
@@ -48,7 +48,7 @@ Required values:
 17, 18, 80, 81.
 
 Results:
-- 17 (AGE-2P-17-A, member-a): Pass — [View record](results/member-a.md##-2-Point-Boundary-Tests)
+- 17 (AGE-2P-17-A, member-a): Pass — [View record](results/member-a.md#2-point-boundary-tests)
 - 18 (AGE-2P-18-B, member-b): _To be added_
 - 80 (AGE-2P-80-C, member-c): _To be added_
 - 81 (AGE-2P-81-D, member-d): Pass — [View record](results/member-d.md#test-id-age-2p-81-d)
@@ -61,7 +61,7 @@ Required values:
 Convention: ISTQB CTFL v4.0 eight-value convention.
 
 Results:
-- 16 (member-a): Pass — [View record](results/member-a.md#-3-point-boundary-tests)
+- 16 (member-a): Pass — [View record](results/member-a.md#3-point-boundary-tests)
 - 17: reused from AGE-2P-17-A — _To be added_
 - 18: reused from AGE-2P-18-B — _To be added_
 - 19 (member-b): _To be added_
